@@ -1,0 +1,24 @@
+@using GenericTypeBlazor.Shared.Models;
+
+@typeparam T;
+
+    <div>
+        <ul>
+            @ChildContent
+        </ul>
+    </div>
+
+
+@code {
+    [Parameter]
+    protected RenderFragment ChildContent { get; set; }
+
+    [Parameter]
+    public IEnumerable<T> Data { get; set; }
+
+    [Parameter]
+    public EventCallback<EventArgsData<T>> EventOne { get; set; }
+
+    [Parameter]
+    public EventCallback<EventArguments> EventTwo { get; set; }
+}

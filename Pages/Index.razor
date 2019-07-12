@@ -1,0 +1,13 @@
+﻿@page "/"
+@using GenericTypeBlazor.Shared.Models;
+
+<MyGenComponent Data="@MyData" EventTwo="@Event2"></MyGenComponent>
+
+@code {
+    public List<string> MyData = new List<string>() { "a", "b", "c", "d" };
+
+    public void Event2(EventArguments args)
+    {
+
+    }
+}
